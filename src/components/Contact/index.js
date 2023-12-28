@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import Loader from 'react-loaders'
 import emailjs from '@emailjs/browser'
+import { useRef } from "react";
 
 const Contact = () =>  {
 
@@ -10,21 +11,27 @@ const Contact = () =>  {
     const refForm = useRef();
 
     useEffect (() => {
-        return setTimeout(() => {
-            setLetterClass("text-animate-hover")
+        setTimeout(() => {
+            setLetterClass('text-animate-hover')
         }, 3000)
     
     }, [])
 
     const sendEmail = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        emailjs.sendForm('gmail','Sara_5029',refForm.current, 'your_public_key')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        emailjs
+        .sendForm('gmail', 'template_ge1lgzo' , refForm.current, 'bbTseBNjiC_0Wh_Ld')
+            .then(
+                () => {
+                alert('Message successfully sent!')
+                window.location.reload(false)
+            },
+            () => {
+                alert('Failed to send the message, please try again.')
+
+                }
+            )
     };
 
     return (
