@@ -47,7 +47,7 @@ const Contact = () =>  {
                     />
                 </h1>
                 <p>
-                    Looking for all early career postions 
+                I am looking for opportunities where I can work on innovative projects while gaining invaluable hands-on experience guided by strong mentorship and leadership that truly champions diversity.
                 </p>
 
                 <div className="contact-form">

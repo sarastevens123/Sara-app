@@ -25,7 +25,7 @@ const About = () => {
                     />
                 </h1>
                 <p>
-                    ABOUT ME, ABOUT ME, ABOUT ME, ABOUT ME
+                I am a software engineering graduate of Hackbright Academy, a 12-week immersive coding bootcamp for women and gender-diverse people and current City College of San Francisco student with a focus on Technology and Computer Science. I am passionate about building web applications using Python, JavaScript, React, SQL, and AWS. I have completed several projects that demonstrate my proficiency in full-stack development, such as a personal portfolio website, and a restaurant review platform.
                 </p>
             </div>
             <div className='stage-cube-cont'>
