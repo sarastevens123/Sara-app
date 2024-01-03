@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
+import DrawSVGPlugin from 'gsap-plus/DrawSVGPlugin';
 import LogoS from '../../../assets/logo-s.png';
 import './index.scss';
 
