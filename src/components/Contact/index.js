@@ -24,8 +24,8 @@ const Contact = () =>  {
         .sendForm('gmail', 'template_ge1lgzo' , refForm.current, 'bbTseBNjiC_0Wh_Ld')
             .then(
                 () => {
-                alert('Message successfully sent!')
-                window.location.reload(true)
+                alert('Message successfully sent!');
+                window.location.reload(true);
             },
             () => {
                 alert('Failed to send the message, please try again.')
