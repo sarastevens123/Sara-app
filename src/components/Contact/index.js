@@ -23,6 +23,8 @@ const Contact = () =>  {
         emailjs.sendForm('gmail', 'template_ge1lgzo', refForm.current, 'bbTseBNjiC_0Wh_Ld')
             .then((result) => {
                 console.log(result.text);
+                alert('Message successfully sent!');
+                window.location.reload(false);
             }, (error) => {
                 console.log(error.text);
             });
