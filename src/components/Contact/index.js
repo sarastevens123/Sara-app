@@ -20,19 +20,31 @@ const Contact = () =>  {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs
-        .sendForm('gmail', 'template_ge1lgzo' , refForm.current, 'bbTseBNjiC_0Wh_Ld')
-            .then(
-                () => {
-                alert('Message successfully sent!');
-                window.location.reload(true);
-            },
-            () => {
-                alert('Failed to send the message, please try again.')
-
-                }
-            )
+        emailjs.sendForm('gmail', 'template_ge1lgzo', refForm.current, 'bbTseBNjiC_0Wh_Ld')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            
     };
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+
+    //     emailjs
+    //     .sendForm('gmail', 'template_ge1lgzo' , refForm.current, 'bbTseBNjiC_0Wh_Ld')
+    //         .then(
+    //             () => {
+    //             alert('Message successfully sent!');
+    //             window.location.reload(true);
+    //         },
+    //         () => {
+    //             alert('Failed to send the message, please try again.')
+
+    //             }
+    //         )
+    // };
 
     return (
         <>
