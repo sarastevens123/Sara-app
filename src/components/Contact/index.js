@@ -24,7 +24,8 @@ const Contact = () =>  {
             .then((result) => {
                 console.log(result.text);
                 alert('Message successfully sent!');
-                window.location.reload(false);
+                // relocation doesnt work in deployment with netflify. fix this .
+                // window.location.reload(false);
             }, (error) => {
                 console.log(error.text);
             });
