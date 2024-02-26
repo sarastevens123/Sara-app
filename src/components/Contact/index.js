@@ -3,6 +3,7 @@ import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import emailjs from '@emailjs/browser'
 import { useRef } from "react";
+import { Redirect } from "react-router-dom";
 
 const Contact = () =>  {
 
@@ -23,16 +24,13 @@ const Contact = () =>  {
             .then((result) => {
                 console.log(result.text);
                 alert('Message successfully sent!');
-                
-                setTimeout(function(){
-                    window.location.reload();
-                 }, 1000);
-               
             }, (error) => {
                 console.log(error.text);
             });
             
     };
+
+    
 
 
     return (
