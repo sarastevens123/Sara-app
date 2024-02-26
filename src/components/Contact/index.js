@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
-import Loader from 'react-loaders'
 import emailjs from '@emailjs/browser'
 import { useRef } from "react";
 
@@ -24,30 +23,17 @@ const Contact = () =>  {
             .then((result) => {
                 console.log(result.text);
                 alert('Message successfully sent!');
-                // relocation doesnt work in deployment with netflify. fix this .
-                // window.location.reload(false);
+                
+                setTimeout(function(){
+                    window.location.reload();
+                 }, 1000);
+               
             }, (error) => {
                 console.log(error.text);
             });
             
     };
 
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-
-    //     emailjs
-    //     .sendForm('gmail', 'template_ge1lgzo' , refForm.current, 'bbTseBNjiC_0Wh_Ld')
-    //         .then(
-    //             () => {
-    //             alert('Message successfully sent!');
-    //             window.location.reload(true);
-    //         },
-    //         () => {
-    //             alert('Failed to send the message, please try again.')
-
-    //             }
-    //         )
-    // };
 
     return (
         <>
@@ -86,7 +72,7 @@ const Contact = () =>  {
                 </div>
             </div>
         </div>
-        <Loader type="pacman" />
+        
         </>
 
     )
