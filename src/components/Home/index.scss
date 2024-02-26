@@ -1,7 +1,7 @@
 .home-page {
     .text-zone {
       position: absolute;
-      left: 10%;
+      left: 25%;
       top: 50%;
       transform: translateY(-50%);
       width: 100%;
@@ -75,7 +75,8 @@
  
       &:hover {
         background:#FFCF96;
-        color: #CDFADB;
+        color: #FF8080;
+        
         
       }
     }

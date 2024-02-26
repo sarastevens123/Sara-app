@@ -1,6 +1,10 @@
-h1 {
-    color: red;
-    font-size: large;
-    font-style: oblique;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
+.text-zone {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-height: 100%;
+    }
+
